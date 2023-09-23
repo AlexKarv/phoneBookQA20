@@ -1,10 +1,12 @@
 package utils;
 
+import com.github.javafaker.Faker;
+
 import java.util.Random;
 
 public class RandomUtils {
     Random random = new Random();
-
+    static Faker faker = new Faker();
     public String generateEmail(int length) {
         String[] domains = {"gmail.com", "yahoo.com", "outlook.com", "example.com", "domain.com"};
         String domain = domains[random.nextInt(domains.length)];
@@ -20,6 +22,13 @@ public class RandomUtils {
             randomString[i] = characters.charAt(index);
         }
         return new String(randomString);
+    }
+
+    public static String generateFakerEmail () {
+
+        String email = faker.internet().emailAddress();
+
+        return email;
     }
 
 }

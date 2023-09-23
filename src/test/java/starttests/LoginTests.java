@@ -11,20 +11,12 @@ import utils.RandomUtils;
 
 import java.util.concurrent.TimeUnit;
 
-public class LoginTests {
-    WebDriver driver;
-    @BeforeClass
-    public void precondition() {
-        driver = new ChromeDriver();
-        driver.navigate().to("https://telranedu.web.app/home");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-    }
+public class LoginTests extends PhoneBook {
 
     @Test
     public void loginPositiveTest() throws InterruptedException {
         String email = "n4j5ymkg@domain.com";
-        System.out.println(email);
+
 
         driver.findElement(By.xpath("//a[@href='/login']")).click();
 
@@ -51,11 +43,6 @@ public class LoginTests {
             throw new RuntimeException(e);
         }
 
-    }
-
-    @AfterClass
-    public void postCondition() {
-        driver.quit();
     }
 
 }
