@@ -1,19 +1,13 @@
 package starttests;
 
 import com.github.javafaker.Faker;
+import org.apache.commons.lang3.RandomUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import utils.RandomUtils;
+//import java.utils.RandomUtils.java;
 
-import java.util.concurrent.TimeUnit;
-
-public class RegistrationTest extends PhoneBook {
+public class RegistrationTest extends BaseTest {
     //WebDriver driver;
 
     RandomUtils randomUtils = new RandomUtils();

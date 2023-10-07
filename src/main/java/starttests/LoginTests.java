@@ -1,17 +1,10 @@
 package starttests;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import utils.RandomUtils;
 
-import java.util.concurrent.TimeUnit;
-
-public class LoginTests extends PhoneBook {
+public class LoginTests extends BaseTest {
 
     @Test
     public void loginPositiveTest() throws InterruptedException {

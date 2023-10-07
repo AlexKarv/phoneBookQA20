@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 
 import java.util.concurrent.TimeUnit;
 
-public class PhoneBook {
+public class BaseTest {
     WebDriver driver;
 
 
